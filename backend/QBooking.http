@@ -1,0 +1,6 @@
+@QBooking_HostAddress = http://localhost:5171
+
+GET {{QBooking_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
