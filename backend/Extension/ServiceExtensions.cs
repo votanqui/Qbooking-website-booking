@@ -56,6 +56,11 @@ namespace QBooking.Extension
 
             services.AddHttpClient();
 
+            services.AddScoped<IHostEarningsService, HostEarningsService>();
+
+            services.AddHostedService<MonthlyPayoutBackgroundService>();
+
+            services.AddScoped<IHostPayoutService, HostPayoutService>();
 
             return services;
         }

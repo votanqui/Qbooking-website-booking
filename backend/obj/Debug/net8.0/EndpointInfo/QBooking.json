@@ -6014,6 +6014,814 @@
         }
       }
     },
+    "/api/HostEarnings": {
+      "get": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/statistics": {
+      "get": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "fromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningsStatisticsDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningsStatisticsDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningsStatisticsDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/{id}": {
+      "get": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/summary": {
+      "get": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": -1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningsSummaryDtoIEnumerableApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningsSummaryDtoIEnumerableApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningsSummaryDtoIEnumerableApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/admin/all": {
+      "get": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/admin/{id}/approve": {
+      "put": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/admin/{id}/reject": {
+      "put": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostEarnings/admin/statistics": {
+      "get": {
+        "tags": [
+          "HostEarnings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutStatisticsDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutStatisticsDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutStatisticsDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout": {
+      "get": {
+        "tags": [
+          "HostPayout"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoIEnumerableApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoIEnumerableApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoIEnumerableApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/{id}": {
+      "get": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/{id}/earnings": {
+      "get": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/{id}/bank-info": {
+      "put": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBankInfoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBankInfoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBankInfoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/pending-earnings": {
+      "get": {
+        "tags": [
+          "HostPayout"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostEarningDtoIEnumerableApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/admin/all": {
+      "get": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/admin/create-manual": {
+      "post": {
+        "tags": [
+          "HostPayout"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateManualPayoutDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateManualPayoutDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateManualPayoutDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HostPayoutDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/admin/{id}/process": {
+      "put": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcessPayoutDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcessPayoutDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProcessPayoutDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/admin/{id}/complete": {
+      "put": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/admin/{id}/cancel": {
+      "put": {
+        "tags": [
+          "HostPayout"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HostPayout/admin/statistics": {
+      "get": {
+        "tags": [
+          "HostPayout"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutStatisticsDtoApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutStatisticsDtoApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PayoutStatisticsDtoApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/ImageStatistics/overview": {
       "get": {
         "tags": [
@@ -13504,6 +14312,13 @@
               "$ref": "#/components/schemas/Refund"
             },
             "nullable": true
+          },
+          "hostEarnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HostEarning"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -14468,6 +15283,29 @@
         },
         "additionalProperties": false
       },
+      "CreateManualPayoutDto": {
+        "required": [
+          "hostId",
+          "payoutPeriodEnd",
+          "payoutPeriodStart"
+        ],
+        "type": "object",
+        "properties": {
+          "hostId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payoutPeriodStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "payoutPeriodEnd": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateMultipleRoomTypesRequest": {
         "type": "object",
         "properties": {
@@ -15338,6 +16176,569 @@
         },
         "additionalProperties": false
       },
+      "HostEarning": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "propertyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "earningAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "platformFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "taxAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "netAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "earnedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "paidDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "payoutId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "booking": {
+            "$ref": "#/components/schemas/Booking"
+          },
+          "host": {
+            "$ref": "#/components/schemas/User"
+          },
+          "property": {
+            "$ref": "#/components/schemas/Property"
+          },
+          "payout": {
+            "$ref": "#/components/schemas/HostPayout"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostName": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "earningAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "platformFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "taxAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "netAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "earnedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "paidDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "payoutId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "propertyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookingReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/HostEarningDto"
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningDtoIEnumerableApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HostEarningDto"
+            },
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningsStatisticsDto": {
+        "type": "object",
+        "properties": {
+          "totalEarnings": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalPlatformFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalTax": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalNetAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalBookings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pendingCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rejectedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "averageEarningPerBooking": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningsStatisticsDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/HostEarningsStatisticsDto"
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningsSummaryDto": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalEarnings": {
+            "type": "number",
+            "format": "double"
+          },
+          "netAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "bookingCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostEarningsSummaryDtoIEnumerableApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HostEarningsSummaryDto"
+            },
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostPayout": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payoutPeriodStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "payoutPeriodEnd": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalEarnings": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalPlatformFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalTax": {
+            "type": "number",
+            "format": "double"
+          },
+          "netPayoutAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "bookingCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bankName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountName": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "processedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "processedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "host": {
+            "$ref": "#/components/schemas/User"
+          },
+          "hostEarnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HostEarning"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostPayoutDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostName": {
+            "type": "string",
+            "nullable": true
+          },
+          "payoutPeriodStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "payoutPeriodEnd": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalEarnings": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalPlatformFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalTax": {
+            "type": "number",
+            "format": "double"
+          },
+          "netPayoutAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "bookingCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bankName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountName": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "processedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostPayoutDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/HostPayoutDto"
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HostPayoutDtoIEnumerableApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HostPayoutDto"
+            },
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "HostPropertyReviewsResponse": {
         "type": "object",
         "properties": {
@@ -15741,6 +17142,60 @@
         },
         "additionalProperties": false
       },
+      "PayoutStatisticsDto": {
+        "type": "object",
+        "properties": {
+          "totalPayouts": {
+            "type": "number",
+            "format": "double"
+          },
+          "processedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pendingCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "completedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cancelledCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "averagePayoutAmount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayoutStatisticsDtoApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PayoutStatisticsDto"
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PeakHoursResponse": {
         "type": "object",
         "properties": {
@@ -16016,6 +17471,23 @@
           "count": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcessPayoutDto": {
+        "required": [
+          "transactionReference"
+        ],
+        "type": "object",
+        "properties": {
+          "transactionReference": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -19700,6 +21172,29 @@
         },
         "additionalProperties": false
       },
+      "UpdateBankInfoDto": {
+        "required": [
+          "bankAccountName",
+          "bankAccountNumber",
+          "bankName"
+        ],
+        "type": "object",
+        "properties": {
+          "bankName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "bankAccountNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "bankAccountName": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateBookingStatusRequest": {
         "type": "object",
         "properties": {
@@ -19878,6 +21373,24 @@
           "provinceId": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "bankName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountNumber": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
             "nullable": true
           }
         },
@@ -20280,6 +21793,18 @@
           "isActive": {
             "type": "boolean"
           },
+          "bankName": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountName": {
+            "type": "string",
+            "nullable": true
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time",
@@ -20314,6 +21839,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Refund"
+            },
+            "nullable": true
+          },
+          "hostEarnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HostEarning"
             },
             "nullable": true
           }

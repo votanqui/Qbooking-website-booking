@@ -290,7 +290,11 @@ namespace QBooking.Controllers
                     IsActive = user.IsActive,
                     CreatedAt = user.CreatedAt,
                     UpdatedAt = user.UpdatedAt ?? DateTime.UtcNow,
+                    BankName = user.Role?.ToLower() == "host" ? user.BankName : null,
+                    BankAccountNumber = user.Role?.ToLower() == "host" ? user.BankAccountNumber : null,
+                    BankAccountName = user.Role?.ToLower() == "host" ? user.BankAccountName : null,
                     PropertyStats = user.Role?.ToLower() == "host" ? propertyStats : null,
+
                     BookingStats = bookingStats,
                     RecentSearches = recentSearches
                 };
@@ -736,6 +740,9 @@ namespace QBooking.Controllers
                     IsEmailVerified = user.IsEmailVerified,
                     IsActive = user.IsActive,
                     CreatedAt = user.CreatedAt,
+                    BankName = user.Role?.ToLower() == "host" ? user.BankName : null,
+                    BankAccountNumber = user.Role?.ToLower() == "host" ? user.BankAccountNumber : null,
+                    BankAccountName = user.Role?.ToLower() == "host" ? user.BankAccountName : null
                 };
 
                 return Ok(new ApiResponse<UserProfileResponse>
@@ -996,7 +1003,10 @@ namespace QBooking.Controllers
                     Gender = user.Gender,
                     AddressDetail = user.AddressDetail,
                     CommuneId = user.CommuneId,
-                    ProvinceId = user.ProvinceId
+                    ProvinceId = user.ProvinceId,
+                    BankName = user.BankName,
+                    BankAccountNumber = user.BankAccountNumber,
+                    BankAccountName = user.BankAccountName
                 };
 
                 // Update user information
@@ -1020,7 +1030,17 @@ namespace QBooking.Controllers
 
                 if (request.ProvinceId.HasValue)
                     user.ProvinceId = request.ProvinceId;
+                if (user.Role?.ToLower() == "host")
+                {
+                    if (request.BankName != null)
+                        user.BankName = request.BankName;
 
+                    if (request.BankAccountNumber != null)
+                        user.BankAccountNumber = request.BankAccountNumber;
+
+                    if (request.BankAccountName != null)
+                        user.BankAccountName = request.BankAccountName;
+                }
                 user.UpdatedAt = DateTime.UtcNow;
 
                 // Store new values for audit log
@@ -1032,7 +1052,10 @@ namespace QBooking.Controllers
                     Gender = user.Gender,
                     AddressDetail = user.AddressDetail,
                     CommuneId = user.CommuneId,
-                    ProvinceId = user.ProvinceId
+                    ProvinceId = user.ProvinceId,
+                    BankName = user.BankName,
+                    BankAccountNumber = user.BankAccountNumber,
+                    BankAccountName = user.BankAccountName
                 };
 
                 await _context.SaveChangesAsync();

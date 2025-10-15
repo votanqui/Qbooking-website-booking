@@ -18,6 +18,11 @@ namespace QBooking.Models
         public bool IsEmailVerified { get; set; } = false;
         public bool IsActive { get; set; } = true;
 
+
+        public string? BankName { get; set; }
+        public string? BankAccountNumber { get; set; }
+        public string? BankAccountName { get; set; }
+
         public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
 
@@ -28,5 +33,7 @@ namespace QBooking.Models
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
         public ICollection<RefundTicket> RefundTickets { get; set; } = new List<RefundTicket>();    
         public ICollection<Refund> Refunds { get; set; } = new List<Refund>();
+
+        public virtual ICollection<HostEarning> HostEarnings { get; set; }
     }
 }

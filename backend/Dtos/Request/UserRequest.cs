@@ -22,6 +22,14 @@ namespace QBooking.DTOs.Request
         public int? CommuneId { get; set; }
 
         public int? ProvinceId { get; set; }
+        [StringLength(100)]
+        public string? BankName { get; set; }
+
+        [StringLength(50)]
+        public string? BankAccountNumber { get; set; }
+
+        [StringLength(100)]
+        public string? BankAccountName { get; set; }
     }
 
     public class UploadAvatarRequest

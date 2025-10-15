@@ -18,6 +18,9 @@
         public bool IsEmailVerified { get; set; }
         public bool IsActive { get; set; }
         public DateTime? CreatedAt { get; set; }
+        public string? BankName { get; set; }
+        public string? BankAccountNumber { get; set; }
+        public string? BankAccountName { get; set; }
     }
 
     public class PropertySummaryResponse
@@ -292,6 +295,10 @@
         public int? CommuneId { get; set; }
         public bool IsEmailVerified { get; set; }
         public bool IsActive { get; set; }
+        public string? BankName { get; set; }
+        public string? BankAccountNumber { get; set; }
+        public string? BankAccountName { get; set; }
+
         public DateTime? CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public PropertyStatsResponse? PropertyStats { get; set; }

@@ -55,6 +55,9 @@ namespace QBooking.Data
         public DbSet<PropertyView> PropertyViews { get; set; }
 
         public DbSet<WebsiteSetting> WebsiteSettings { get; set; }
+        public DbSet<HostEarning> HostEarnings { get; set; }
+        public DbSet<HostPayout> HostPayouts { get; set; } 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

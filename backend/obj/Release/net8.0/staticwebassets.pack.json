@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\avatars\\1005\\avatar_638951811764105627.jpg",
+      "PackagePath": "staticwebassets\\avatars\\1005\\avatar_638951811764105627.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\avatars\\3\\avatar_638942811156242319.jpg",
+      "PackagePath": "staticwebassets\\avatars\\3\\avatar_638942811156242319.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\avatars\\4\\avatar_638949993244365748.jpg",
+      "PackagePath": "staticwebassets\\avatars\\4\\avatar_638949993244365748.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\1018\\c2b088a6-00f0-48f7-b550-ee2d51080c4e.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\1018\\c2b088a6-00f0-48f7-b550-ee2d51080c4e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\1018\\cd698586-6ef6-4887-b2a5-92a6ede679cd.jpeg",
+      "PackagePath": "staticwebassets\\images\\properties\\1018\\cd698586-6ef6-4887-b2a5-92a6ede679cd.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\1018\\e010d171-4187-428d-b907-1d4c3f7445a3.png",
+      "PackagePath": "staticwebassets\\images\\properties\\1018\\e010d171-4187-428d-b907-1d4c3f7445a3.png"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2018\\9c289d05-3106-438c-8082-dbdd54aa31d4.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2018\\9c289d05-3106-438c-8082-dbdd54aa31d4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2018\\b4914bfa-80e8-4b66-8145-56c052ebfd87.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2018\\b4914bfa-80e8-4b66-8145-56c052ebfd87.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2019\\2adf8d40-cb9d-407f-b721-45f19afd0c87.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2019\\2adf8d40-cb9d-407f-b721-45f19afd0c87.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2019\\553b8e3d-70ad-414a-bb2f-fe7dc08f0b4f.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2019\\553b8e3d-70ad-414a-bb2f-fe7dc08f0b4f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2020\\184a91c5-078e-40ca-8679-d4e940cfe6e3.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2020\\184a91c5-078e-40ca-8679-d4e940cfe6e3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2020\\7a3ecf55-e5ce-4af2-b544-37c886e10a84.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2020\\7a3ecf55-e5ce-4af2-b544-37c886e10a84.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2021\\66e9242c-2717-4c17-8c3a-499b3a63533d.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2021\\66e9242c-2717-4c17-8c3a-499b3a63533d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2021\\ed2349cd-ff11-4e9f-8766-5ccc19e2e809.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2021\\ed2349cd-ff11-4e9f-8766-5ccc19e2e809.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2022\\17e62762-b410-4e02-9e57-60ef716fbdb2.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2022\\17e62762-b410-4e02-9e57-60ef716fbdb2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2022\\36af9c0a-bc77-487b-9afb-46fbe79fe56b.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2022\\36af9c0a-bc77-487b-9afb-46fbe79fe56b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2022\\62789900-2a58-495d-b0ff-8bd8187ed298.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2022\\62789900-2a58-495d-b0ff-8bd8187ed298.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2022\\6c6bb56c-1493-4ac5-9af7-51736205983f.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2022\\6c6bb56c-1493-4ac5-9af7-51736205983f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2023\\5a050b1e-171b-4b6b-919e-120e7bb3e96b.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2023\\5a050b1e-171b-4b6b-919e-120e7bb3e96b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2023\\60cc6446-61f6-445d-be08-6de54f08eaa3.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2023\\60cc6446-61f6-445d-be08-6de54f08eaa3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2024\\6b37663b-8f04-47c5-934d-02b36831f830.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2024\\6b37663b-8f04-47c5-934d-02b36831f830.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2024\\f2bf7408-7cbf-40be-bcdc-b5ab7472ef9e.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2024\\f2bf7408-7cbf-40be-bcdc-b5ab7472ef9e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2025\\452a4607-122b-4c01-b335-93d67719a64d.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2025\\452a4607-122b-4c01-b335-93d67719a64d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2025\\d04e9c99-d502-4a83-a5b7-79ed8d222fe2.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2025\\d04e9c99-d502-4a83-a5b7-79ed8d222fe2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2026\\a5589491-8268-46b0-99e2-25f9baa84455.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\2026\\a5589491-8268-46b0-99e2-25f9baa84455.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\2026\\b47c3e93-bb87-44c0-a71c-134bae2c129a.jfif",
+      "PackagePath": "staticwebassets\\images\\properties\\2026\\b47c3e93-bb87-44c0-a71c-134bae2c129a.jfif"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\3018\\12c80914-318e-4dff-96e4-77b2e70d4d98.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\3018\\12c80914-318e-4dff-96e4-77b2e70d4d98.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\3018\\ec6abe21-69ba-4698-8ca6-b949e0640201.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\3018\\ec6abe21-69ba-4698-8ca6-b949e0640201.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\3019\\fb408a49-199b-47c3-b6ba-09d1db954316.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\3019\\fb408a49-199b-47c3-b6ba-09d1db954316.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\3020\\6bdd7e36-7f0a-4065-8648-b645c9b05231.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\3020\\6bdd7e36-7f0a-4065-8648-b645c9b05231.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\3020\\c98cf9e4-3a16-4032-9dfb-bba5966ffa22.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\3020\\c98cf9e4-3a16-4032-9dfb-bba5966ffa22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\properties\\3020\\eb701c99-4a2d-44d9-b820-03122883321b.jpg",
+      "PackagePath": "staticwebassets\\images\\properties\\3020\\eb701c99-4a2d-44d9-b820-03122883321b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\2002\\a703b1d6-9d26-4eb2-84ce-1e56789ad650.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\2002\\a703b1d6-9d26-4eb2-84ce-1e56789ad650.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\2002\\cf57407f-e504-4757-9757-4482302ebf71.PNG",
+      "PackagePath": "staticwebassets\\images\\rooms\\2002\\cf57407f-e504-4757-9757-4482302ebf71.PNG"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\2002\\e7a36ccd-a6cb-46eb-93a8-bdb1f6c5c8cc.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\2002\\e7a36ccd-a6cb-46eb-93a8-bdb1f6c5c8cc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\3002\\59ec50a6-d03c-45a5-9ede-7038dd76d7e3.png",
+      "PackagePath": "staticwebassets\\images\\rooms\\3002\\59ec50a6-d03c-45a5-9ede-7038dd76d7e3.png"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4002\\9a1de126-a638-40bf-8f33-8fbb2cdaaaf2.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4002\\9a1de126-a638-40bf-8f33-8fbb2cdaaaf2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4002\\a7dd54c1-42e5-40de-b31f-a70c65ed5a98.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4002\\a7dd54c1-42e5-40de-b31f-a70c65ed5a98.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4003\\47d2b261-1132-4b1e-97dc-95f86c38d377.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4003\\47d2b261-1132-4b1e-97dc-95f86c38d377.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4003\\9812eb16-a104-4929-be61-39b7881e8c00.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4003\\9812eb16-a104-4929-be61-39b7881e8c00.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4004\\1c9b1591-3ce7-46de-92cd-347e657a465d.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4004\\1c9b1591-3ce7-46de-92cd-347e657a465d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4004\\deed8afc-e21d-4489-bf66-fed421e4b6e6.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4004\\deed8afc-e21d-4489-bf66-fed421e4b6e6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4005\\3a3b702b-483b-4b41-b9f6-a279ea600ac1.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4005\\3a3b702b-483b-4b41-b9f6-a279ea600ac1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4005\\8cf88b7b-90f5-477d-90ea-352ce1f7bbfe.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4005\\8cf88b7b-90f5-477d-90ea-352ce1f7bbfe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4006\\62045b9d-2c5e-4de3-baac-f18540795342.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4006\\62045b9d-2c5e-4de3-baac-f18540795342.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4006\\f48588d8-87c1-434b-9f64-3b3ef65de5f9.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4006\\f48588d8-87c1-434b-9f64-3b3ef65de5f9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4007\\1dbbd478-7756-4f07-b9e6-0b20b64374d7.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4007\\1dbbd478-7756-4f07-b9e6-0b20b64374d7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4007\\ef473f75-6278-419f-a776-78994e61f3f5.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4007\\ef473f75-6278-419f-a776-78994e61f3f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4008\\336723a4-251f-4f61-9c5a-fac8d7407adf.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4008\\336723a4-251f-4f61-9c5a-fac8d7407adf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4008\\dfce3328-a6a3-4bc0-8fa0-22b80790780e.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4008\\dfce3328-a6a3-4bc0-8fa0-22b80790780e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4009\\c90833e3-9e77-40d2-9f30-d02c16fcca91.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4009\\c90833e3-9e77-40d2-9f30-d02c16fcca91.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4009\\f763e530-f891-4a6e-bc7c-3d9ad3fbae79.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4009\\f763e530-f891-4a6e-bc7c-3d9ad3fbae79.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4010\\943977f0-78bc-4a44-8db4-13dd731467f9.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4010\\943977f0-78bc-4a44-8db4-13dd731467f9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4010\\94b1a6cf-e124-4d49-a063-c5c42ebb3bb6.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4010\\94b1a6cf-e124-4d49-a063-c5c42ebb3bb6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4011\\8d1e665a-f0be-4c1f-8912-d51307590a6b.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4011\\8d1e665a-f0be-4c1f-8912-d51307590a6b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4011\\abd31771-a34c-40be-a24e-e889299b9dde.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4011\\abd31771-a34c-40be-a24e-e889299b9dde.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4012\\57f01d30-c2ad-4c3f-8293-60f3c66ef374.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4012\\57f01d30-c2ad-4c3f-8293-60f3c66ef374.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4012\\ecc27cb6-f7ba-4d8c-8fe3-509b0789a6c2.jfif",
+      "PackagePath": "staticwebassets\\images\\rooms\\4012\\ecc27cb6-f7ba-4d8c-8fe3-509b0789a6c2.jfif"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4013\\6d0acbaa-6c5a-4b12-aa75-9733cc439220.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4013\\6d0acbaa-6c5a-4b12-aa75-9733cc439220.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4013\\7805ae8d-16f7-4584-9905-f4dc3786f03f.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4013\\7805ae8d-16f7-4584-9905-f4dc3786f03f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4014\\0396c1cd-72ce-479b-bea3-90d865802417.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4014\\0396c1cd-72ce-479b-bea3-90d865802417.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4014\\33ac315d-4f98-4f0f-8a8c-aea695b2ce51.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4014\\33ac315d-4f98-4f0f-8a8c-aea695b2ce51.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4015\\49fa39ea-7020-404b-b131-903527a026da.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4015\\49fa39ea-7020-404b-b131-903527a026da.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4015\\b2b4f8d4-925f-4af8-9c12-3bff6898f985.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4015\\b2b4f8d4-925f-4af8-9c12-3bff6898f985.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4016\\60f442f4-b80b-46e8-b0c1-6ba15b3d9c10.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4016\\60f442f4-b80b-46e8-b0c1-6ba15b3d9c10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4016\\8e29cebc-5a4d-4a1a-91d1-ac79d603f602.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4016\\8e29cebc-5a4d-4a1a-91d1-ac79d603f602.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4017\\6e962c49-1900-458b-8dc5-e30237ce90f5.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4017\\6e962c49-1900-458b-8dc5-e30237ce90f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4017\\c05122a8-834d-4960-a0da-fc88beed22b8.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4017\\c05122a8-834d-4960-a0da-fc88beed22b8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4018\\3529f81f-cbb9-44c7-8364-431c5dc40c42.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4018\\3529f81f-cbb9-44c7-8364-431c5dc40c42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4018\\fc077b72-5581-4e4c-8ba5-7e6a874b7a67.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4018\\fc077b72-5581-4e4c-8ba5-7e6a874b7a67.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4019\\1760787f-d12d-474e-af38-4aaffcb2d9f3.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4019\\1760787f-d12d-474e-af38-4aaffcb2d9f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\4019\\c807c08f-7512-4134-9469-c2dbf13af3f4.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\4019\\c807c08f-7512-4134-9469-c2dbf13af3f4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5009\\318a7490-a5ac-4c61-94d8-d8a04cf6d68d.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5009\\318a7490-a5ac-4c61-94d8-d8a04cf6d68d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5009\\742cd81e-0c84-4bbe-804f-ebda3072f3ac.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5009\\742cd81e-0c84-4bbe-804f-ebda3072f3ac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5010\\8f6b5e96-009a-4d92-9144-c453a668a2d7.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5010\\8f6b5e96-009a-4d92-9144-c453a668a2d7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5010\\ee240dd8-6a1b-413a-aaaf-54fe8c665b04.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5010\\ee240dd8-6a1b-413a-aaaf-54fe8c665b04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5021\\03e3f6e9-4752-4f80-924d-473038258faf.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5021\\03e3f6e9-4752-4f80-924d-473038258faf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5021\\aa23dced-6687-48d0-b31b-e92548bc84ee.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5021\\aa23dced-6687-48d0-b31b-e92548bc84ee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5022\\63cd7b99-9a34-41c3-9fbf-5cedf5520162.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5022\\63cd7b99-9a34-41c3-9fbf-5cedf5520162.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\5022\\b9b40c88-3309-426e-bf08-b4a7981e08c2.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\5022\\b9b40c88-3309-426e-bf08-b4a7981e08c2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\images\\rooms\\6002\\c338e37c-2e4b-447a-9759-2c0cf2fa82f1.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\6002\\c338e37c-2e4b-447a-9759-2c0cf2fa82f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\review\\1025_7b30d5a7-a736-4122-874d-017376859c6e.jpg",
+      "PackagePath": "staticwebassets\\review\\1025_7b30d5a7-a736-4122-874d-017376859c6e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\review\\3012_49ebc3e1-f811-41ec-b436-f5ff571e5da0.jpg",
+      "PackagePath": "staticwebassets\\review\\3012_49ebc3e1-f811-41ec-b436-f5ff571e5da0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\settings\\favicon_20251005161714.ico",
+      "PackagePath": "staticwebassets\\settings\\favicon_20251005161714.ico"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\settings\\logo_20251005161714.ico",
+      "PackagePath": "staticwebassets\\settings\\logo_20251005161714.ico"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.QBooking.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.QBooking.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.QBooking.props",
+      "PackagePath": "build\\QBooking.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.QBooking.props",
+      "PackagePath": "buildMultiTargeting\\QBooking.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.QBooking.props",
+      "PackagePath": "buildTransitive\\QBooking.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

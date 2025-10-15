@@ -325,8 +325,16 @@
       "PackagePath": "staticwebassets\\images\\rooms\\6002\\c338e37c-2e4b-447a-9759-2c0cf2fa82f1.jpg"
     },
     {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\review\\1025_7b30d5a7-a736-4122-874d-017376859c6e.jpg",
       "PackagePath": "staticwebassets\\review\\1025_7b30d5a7-a736-4122-874d-017376859c6e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\review\\3012_49ebc3e1-f811-41ec-b436-f5ff571e5da0.jpg",
+      "PackagePath": "staticwebassets\\review\\3012_49ebc3e1-f811-41ec-b436-f5ff571e5da0.jpg"
     },
     {
       "Id": "C:\\Users\\votan\\source\\repos\\QBooking\\QBooking\\wwwroot\\settings\\favicon_20251005161714.ico",

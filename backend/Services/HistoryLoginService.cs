@@ -12,23 +12,29 @@ namespace QBooking.Services
         private readonly IEmailQueueService _emailQueueService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly AuditLogService _auditLogService;
-
+        private readonly IConfiguration _configuration;
 
         // Cấu hình cho việc phát hiện hành vi đáng ngờ
-        private const int MAX_LOGIN_ATTEMPTS_PER_DAY = 10;
-        private const int MAX_ACCOUNTS_PER_IP = 5;
-        private const int MAX_DEVICES_PER_ACCOUNT = 10;
+        private int MaxLoginAttemptsPerDay => int.Parse(_configuration["SuspiciousUserDetection:MaxLoginAttemptsPerDay"] ?? "60");
+        private int MaxAccountsPerIp => int.Parse(_configuration["SuspiciousUserDetection:MaxAccountsPerIp"] ?? "15");
+        private int MaxDevicesPerAccount => int.Parse(_configuration["SuspiciousUserDetection:MaxDevicesPerAccount"] ?? "20");
+        private bool EnableAutoBan => bool.Parse(_configuration["SuspiciousUserDetection:EnableAutoBan"] ?? "true");
+        private List<string> ExcludedRoles => (_configuration["SuspiciousUserDetection:ExcludedRoles"] ?? "Admin,SuperAdmin")
+            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(r => r.Trim())
+            .ToList();
         public HistoryLoginService(ApplicationDbContext context,
                                  ILogger<HistoryLoginService> logger,
                                   IEmailQueueService emailQueueService,
                                  IHttpContextAccessor httpContextAccessor,
-                                 AuditLogService auditLogService) // Thêm constructor parameter
+                                 AuditLogService auditLogService, IConfiguration configuration) // Thêm constructor parameter
         {
             _context = context;
             _logger = logger;
             _emailQueueService = emailQueueService;
             _httpContextAccessor = httpContextAccessor;
-            _auditLogService = auditLogService; // Gán service
+            _auditLogService = auditLogService;
+            _configuration = configuration;// Gán service
         }
 
         /// <summary>
@@ -227,14 +233,22 @@ namespace QBooking.Services
 
             try
             {
+                // ⭐ KIỂM TRA XEM CÓ BẬT AUTO-BAN KHÔNG
+                if (!EnableAutoBan)
+                {
+                    _logger.LogInformation("Auto-ban is disabled in configuration");
+                    return bannedUsers;
+                }
+
                 var today = DateTime.UtcNow.Date;
                 var tomorrow = today.AddDays(1);
 
                 // 1. Tìm IP có quá nhiều lần đăng nhập trong ngày
+                // ⭐ SỬ DỤNG PROPERTY THAY VÌ HẰNG SỐ
                 var suspiciousIps = await _context.HistoryLogins
                     .Where(h => h.LoginTime >= today && h.LoginTime < tomorrow)
                     .GroupBy(h => h.IpAddress)
-                    .Where(g => g.Count() > MAX_LOGIN_ATTEMPTS_PER_DAY)
+                    .Where(g => g.Count() > MaxLoginAttemptsPerDay)
                     .Select(g => g.Key)
                     .ToListAsync();
 
@@ -242,7 +256,7 @@ namespace QBooking.Services
                 var ipsWithManyAccounts = await _context.HistoryLogins
                     .Where(h => h.LoginTime >= today && h.LoginTime < tomorrow && h.UserId > 0)
                     .GroupBy(h => h.IpAddress)
-                    .Where(g => g.Select(x => x.UserId).Distinct().Count() > MAX_ACCOUNTS_PER_IP)
+                    .Where(g => g.Select(x => x.UserId).Distinct().Count() > MaxAccountsPerIp)
                     .Select(g => g.Key)
                     .ToListAsync();
 
@@ -250,7 +264,7 @@ namespace QBooking.Services
                 var usersWithManyDevices = await _context.HistoryLogins
                     .Where(h => h.LoginTime >= today && h.LoginTime < tomorrow && h.UserId > 0)
                     .GroupBy(h => h.UserId)
-                    .Where(g => g.Select(x => x.DeviceInfo).Distinct().Count() > MAX_DEVICES_PER_ACCOUNT)
+                    .Where(g => g.Select(x => x.DeviceInfo).Distinct().Count() > MaxDevicesPerAccount)
                     .Select(g => g.Key)
                     .ToListAsync();
 
@@ -282,8 +296,12 @@ namespace QBooking.Services
 
                 if (usersToBan.Any())
                 {
+                    // ⭐ LOẠI TRỪ ADMIN VÀ CÁC ROLE ĐƯỢC CẤU HÌNH
+                    var excludedRoles = ExcludedRoles;
                     var users = await _context.Users
-                        .Where(u => usersToBan.Contains(u.Id) && u.IsActive)
+                        .Where(u => usersToBan.Contains(u.Id) &&
+                                    u.IsActive &&
+                                    !excludedRoles.Contains(u.Role)) // ⭐ LOẠI TRỪ ROLE
                         .ToListAsync();
 
                     foreach (var user in users)
@@ -296,19 +314,19 @@ namespace QBooking.Services
                         var suspiciousActivities = new List<string>();
 
                         if (suspiciousIps.Any())
-                            suspiciousActivities.Add($"Đăng nhập quá nhiều lần từ IP: {string.Join(", ", suspiciousIps.Take(2))}");
+                            suspiciousActivities.Add($"Đăng nhập quá {MaxLoginAttemptsPerDay} lần từ IP: {string.Join(", ", suspiciousIps.Take(2))}");
 
                         if (ipsWithManyAccounts.Any())
-                            suspiciousActivities.Add("IP được sử dụng bởi quá nhiều tài khoản khác nhau");
+                            suspiciousActivities.Add($"IP được sử dụng bởi quá {MaxAccountsPerIp} tài khoản khác nhau");
 
                         if (usersWithManyDevices.Contains(user.Id))
-                            suspiciousActivities.Add("Sử dụng quá nhiều thiết bị khác nhau");
+                            suspiciousActivities.Add($"Sử dụng quá {MaxDevicesPerAccount} thiết bị khác nhau");
 
                         var reason = string.Join("; ", suspiciousActivities);
                         if (string.IsNullOrEmpty(reason))
                             reason = "Phát hiện hoạt động bất thường từ tài khoản của bạn";
 
-                        // ⭐ SỬ DỤNG EMAIL QUEUE THAY VÌ GỬI TRỰC TIẾP
+                        // Gửi email thông báo
                         try
                         {
                             var banData = new AccountBanData
@@ -316,7 +334,7 @@ namespace QBooking.Services
                                 FullName = user.FullName,
                                 Email = user.Email,
                                 Reason = reason,
-                                ContactEmail = "support@qbooking.com", // Có thể config
+                                ContactEmail = "support@qbooking.com",
                                 BannedAt = DateTime.UtcNow,
                                 SuspiciousActivities = suspiciousActivities
                             };
@@ -327,7 +345,6 @@ namespace QBooking.Services
                         catch (Exception emailEx)
                         {
                             _logger.LogError(emailEx, "❌ Failed to queue ban notification email for user {Email}", user.Email);
-                            // Không throw exception để không ảnh hưởng đến việc ban user
                         }
 
                         await _auditLogService.LogActionAsync(
@@ -348,23 +365,23 @@ namespace QBooking.Services
                     }
                 }
 
-                // Log thống kê
+                // Log thống kê với giá trị config
                 if (suspiciousIps.Any())
                 {
                     _logger.LogWarning("Found {Count} IPs with > {Max} login attempts today: {IPs}",
-                                     suspiciousIps.Count, MAX_LOGIN_ATTEMPTS_PER_DAY, string.Join(", ", suspiciousIps));
+                                     suspiciousIps.Count, MaxLoginAttemptsPerDay, string.Join(", ", suspiciousIps));
                 }
 
                 if (ipsWithManyAccounts.Any())
                 {
                     _logger.LogWarning("Found {Count} IPs with > {Max} different accounts: {IPs}",
-                                     ipsWithManyAccounts.Count, MAX_ACCOUNTS_PER_IP, string.Join(", ", ipsWithManyAccounts));
+                                     ipsWithManyAccounts.Count, MaxAccountsPerIp, string.Join(", ", ipsWithManyAccounts));
                 }
 
                 if (usersWithManyDevices.Any())
                 {
                     _logger.LogWarning("Found {Count} users with > {Max} different devices",
-                                     usersWithManyDevices.Count, MAX_DEVICES_PER_ACCOUNT);
+                                     usersWithManyDevices.Count, MaxDevicesPerAccount);
                 }
 
                 return bannedUsers;
@@ -375,7 +392,6 @@ namespace QBooking.Services
                 return new List<User>();
             }
         }
-
         /// <summary>
         /// Lấy địa chỉ IP của client
         /// </summary>
@@ -525,7 +541,7 @@ namespace QBooking.Services
                         UniqueUsers = g.Where(x => x.UserId > 0).Select(x => x.UserId).Distinct().Count(),
                         FailedAttempts = g.Count(x => !x.IsSuccess),
                         SuspiciousIPs = g.GroupBy(x => x.IpAddress)
-                                        .Count(x => x.Count() > MAX_LOGIN_ATTEMPTS_PER_DAY)
+                                        .Count(x => x.Count() > MaxLoginAttemptsPerDay)
                     })
                     .FirstOrDefaultAsync();
 

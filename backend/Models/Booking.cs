@@ -49,5 +49,6 @@
         public ICollection<RefundTicket> RefundTickets { get; set; } = new List<RefundTicket>();
         public ICollection<Refund> Refunds { get; set; } = new List<Refund>();
 
+        public ICollection<HostEarning> HostEarnings { get; set; }
     }
 }

@@ -18,15 +18,7 @@ namespace QBooking.Services
 {
     public interface IBookingService
     {
-        Task<IEnumerable<BookingDto>> GetBookingsByUserIdAsync(
-     int userId,
-     string? bookingCode = null,
-     string? propertyName = null,
-     DateTime? fromDate = null,
-     DateTime? toDate = null,
-     string? status = null,
-     string? paymentStatus = null
- );
+        Task<IEnumerable<BookingDto>> GetBookingsByUserIdAsync(  int userId, string? bookingCode = null, string? propertyName = null, DateTime? fromDate = null,DateTime? toDate = null, string? status = null,string? paymentStatus = null );
         Task<BookingDetailDto?> GetBookingDetailByCodeAsync(string bookingCode, int userId);
         Task<BookingDetailDto?> GetBookingDetailAsync(int bookingId, int userId);
         Task<BookingDto> CreateBookingAsync(CreateBookingRequest request, int userId);
@@ -39,23 +31,11 @@ namespace QBooking.Services
 
 
         Task<IEnumerable<BookingDto>> GetHostBookingsAsync(int hostId, string? userRole, string? status = null, DateTime? fromDate = null, DateTime? toDate = null, int propertyId = 0);
-        Task<AdminBookingListResponse> GetAllBookingsAdminAsync(
-            string? status = null,
-            DateTime? fromDate = null,
-            DateTime? toDate = null,
-            int? customerId = null,
-            int? hostId = null,
-            int? propertyId = null,
-            int page = 1,
-            int pageSize = 50);
+        Task<AdminBookingListResponse> GetAllBookingsAdminAsync(  string? status = null, DateTime? fromDate = null,  DateTime? toDate = null, int? customerId = null, int? hostId = null, int? propertyId = null, int page = 1,int pageSize = 50);
 
         Task<AdminBookingDetailDto?> GetBookingDetailAdminAsync(int bookingId);
 
-        Task<AdminBookingStatisticsDto> GetBookingStatisticsAdminAsync(
-            DateTime? fromDate = null,
-            DateTime? toDate = null,
-            int? propertyId = null,
-            int? hostId = null);
+        Task<AdminBookingStatisticsDto> GetBookingStatisticsAdminAsync(  DateTime? fromDate = null, DateTime? toDate = null, int? propertyId = null, int? hostId = null);
         Task<BookingStatisticsDto> GetBookingStatisticsAsync(int userId, string? userRole, DateTime? fromDate = null, DateTime? toDate = null, int? propertyId = null);
         Task<bool> AdminCancelBookingAsync(int bookingId, int adminId, string reason, decimal? refundAmount = null);
 
@@ -76,33 +56,11 @@ namespace QBooking.Services
 
         Task<byte[]> GenerateBookingReceiptPdfAsync(int bookingId);
 
-        Task<object?> GetAvailableDatesInMonthAsync(
-    int propertyId,
-    int roomTypeId,
-    int year,
-    int month,
-    int roomsCount);
-        Task<object?> CheckRoomAvailabilityDetailedAsync(
-    int propertyId,
-    int roomTypeId,
-    DateTime checkIn,
-    DateTime checkOut,
-    int roomsCount,
-    int adults,
-    int children);
-        Task<BookingDetailDto?> GetHostBookingDetailAsync(
-              int bookingId,
-              int hostId,
-              string? userRole
-          );
+        Task<object?> GetAvailableDatesInMonthAsync( int propertyId,int roomTypeId, int year, int month, int roomsCount);
+        Task<object?> CheckRoomAvailabilityDetailedAsync( int propertyId,  int roomTypeId,  DateTime checkIn, DateTime checkOut,  int roomsCount,  int adults,  int children);
+        Task<BookingDetailDto?> GetHostBookingDetailAsync(  int bookingId,  int hostId, string? userRole   );
 
-        Task<object?> GetPriceQuoteAsync(
-     int propertyId,
-     int roomTypeId,
-     DateTime checkIn,
-     DateTime checkOut,
-     int roomsCount);
-    }
+        Task<object?> GetPriceQuoteAsync( int propertyId,   int roomTypeId,   DateTime checkIn, DateTime checkOut,  int roomsCount);  }
 
     public class BookingService : IBookingService
     {
@@ -114,6 +72,8 @@ namespace QBooking.Services
         private readonly ILogger<BookingService> _logger;
         private readonly IConfiguration _configuration;
         private readonly IEmailQueueService _emailQueueService;
+
+        private readonly IHostEarningsService _hostEarningsService;
         public BookingService(
             ApplicationDbContext context,
             AuditLogService auditLogService,
@@ -121,7 +81,8 @@ namespace QBooking.Services
              IConfiguration config,
                  IServiceProvider serviceProvider,
     ILogger<BookingService> logger
-            , IEmailQueueService emailQueueService
+            , IEmailQueueService emailQueueService,
+      IHostEarningsService hostEarningsService
         )
         {
             _context = context;
@@ -131,6 +92,7 @@ namespace QBooking.Services
             _serviceProvider = serviceProvider;
             _logger = logger;
             _emailQueueService = emailQueueService;
+            _hostEarningsService = hostEarningsService;
         }
 
         public async Task<IEnumerable<BookingDto>> GetBookingsByUserIdAsync(
@@ -1573,7 +1535,18 @@ namespace QBooking.Services
             booking.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-
+            try
+            {
+                var earning = await _hostEarningsService.CreateEarningFromCheckoutAsync(booking);
+                _logger.LogInformation(
+                    $"Created earning {earning.Id} for host {earning.HostId}, " +
+                    $"amount: {earning.NetAmount:C}, booking: {booking.BookingCode}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Failed to create earning for booking {bookingId}");
+                // Không throw để không ảnh hưởng checkout process
+            }
             var updatedBookingForAudit = new
             {
                 booking.Id,

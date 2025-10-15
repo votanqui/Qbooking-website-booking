@@ -90,7 +90,19 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
                 "http://localhost:3000",
-                "http://192.168.1.2:3000"   // ? thêm dòng này
+                "http://192.168.1.2:3000",
+                "http://210.245.90.239:8080",
+                 "http://210.245.90.239:8888",
+                 "http://210.245.90.239:8001",
+                 "http://210.245.90.239:8000",
+               "https://210.245.90.239:8001",
+                "https://210.245.90.239:8000",
+                  "http://210.245.90.239:8002",
+                "https://210.245.90.239:8002",
+                    "http://210.245.90.239:8003",
+                "https://210.245.90.239:8003",
+                 "https://qboking.votanqui.site",
+                   "http://qboking.votanqui.site"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
@@ -132,11 +144,12 @@ builder.Services.AddSession(options =>
 var app = builder.Build();
 
 
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "QBooking API V1");
+    c.RoutePrefix = "swagger"; // Truy c?p t?i /swagger
+});
 app.UseStaticFiles();
 app.UseCors("AllowReactApp");
 app.UseHttpsRedirection();
